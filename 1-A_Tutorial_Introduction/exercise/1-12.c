@@ -1,6 +1,12 @@
 // date:17.4.6
 // author: linyang <942510346@qq.com>
 
+
+/*
+Exercise 1-12. Write a program that prints its input one word per line.
+*/
+
+
 #include <stdio.h>
 
 int main(int argc, char const *argv[])
