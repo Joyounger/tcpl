@@ -1,6 +1,12 @@
 // date:17.4.6
 // author: linyang <942510346@qq.com>
 
+
+/*
+Exercise 1-3. Modify the temperature conversion program to print a heading above the table.
+*/
+
+
 #include <stdio.h>
 
 

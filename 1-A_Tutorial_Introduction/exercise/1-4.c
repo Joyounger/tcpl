@@ -1,8 +1,13 @@
 // date:17.4.6
 // author: linyang <942510346@qq.com>
 
-#include <stdio.h>
 
+
+/*
+Exercise 1-4. Write a program to print the corresponding Celsius to Fahrenheit table.
+*/
+
+#include <stdio.h>
 
 int main(int argc, char const *argv[])
 {

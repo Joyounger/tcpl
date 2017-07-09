@@ -1,6 +1,12 @@
 // date:17.4.6
 // author: linyang <942510346@qq.com>
 
+
+/*
+Exercise 1-8. Write a program to count blanks, tabs, and newlines.
+*/
+
+
 #include <stdio.h>
 
 int main(int argc, char const *argv[])

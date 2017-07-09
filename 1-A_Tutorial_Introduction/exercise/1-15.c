@@ -1,6 +1,12 @@
 // date:17.4.7
 // author: linyang <942510346@qq.com>
 
+
+/*
+Exercise 1.15. Rewrite the temperature conversion program of Section 1.2 to use a function for conversion.
+*/
+
+
 #include <stdio.h>
 
 float temptrans(float fahr)
