@@ -1,0 +1,106 @@
+chap2
+The rules for automatic coercions among
+arithmetic types have been augmented to handle the richer set of types.
+ANSI C标准还对算术类型之间的自动强制转换规则进行了扩充，以适合更多的数据类型
+
+
+2.1
+At least the first 31 characters of an internal name are significant.For function names and external variables,
+the number may be less than 31, because external names may be used by assemblers and loaders over which
+the language has no control.
+对于内部名而言，至少前31个字符是有效的。函数名与外部变量名包含的字符数可能小于31，这是因为汇编程序和加载程序可能会使用这些外部名，而语言本身是无法控制
+加载和汇编程序的。
+
+
+For external names, the standard guarantees uniqueness only for 6 characters and
+a single case.
+对于外部名，ANSI C标准仅保留前6个字符的唯一性，并且不区分大小写。
+
+
+2.2
+int will normally be the natural size for a particular machine.
+int 通常代表机器中整数的自然长度
+
+
+2.3
+an integer constant too big to fit into an int will also be taken as a long.
+如果一个整数太大以至于无法用int类型表示时，也会被当做long类型处理
+
+
+A leading 0 (zero) on an integer constant means octal
+带前缀数字0的整形常量表示它为8进制形式
+
+
+
+2.5
+The direction of truncation for / and the sign of
+the result for % are machine-dependent for negative operands, as is the action taken on overflow or underflow.
+在有负操作数的情况下，整数除法截取的方向以及取模运算结果的符号取决于具体机器的实现，这和处理上溢或下溢的情况是一样的
+
+
+2.7
+Expressions
+that might lose information, like assigning a longer integer type to a shorter, or a floating-point type to an
+integer, may draw a warning, but they are not illegal.
+针对可能导致信息丢失的表达式，编译器可能会给出警告信息，比如把较长的整型值赋给较短的整型变量，把浮点型赋给整形等，但这些表达式并不非法
+
+
+
+The definition of C guarantees that any character in the machine's standard printing character set will never be
+negative, so these characters will always be positive quantities in expressions. But arbitrary bit patterns stored
+in character variables may appear to be negative on some machines, yet positive on others. For portability,
+specify signed or unsigned if non-character data is to be stored in char variables.
+C语言的定义保证了机器的标准打印字符集中的字符不会是负值，因此表达式中的这些字符总是正值，但是存储在字符变量中的位模式在某些机器中可能是负值，在另一些机器中可能是正的。
+为了保证程序的可移植性，如果要在char类型的变量中存储非字符数据，最好指定signed或unsigned。
+
+
+Conversion rules are more complicated when unsigned operands are involved. The problem is that
+comparisons between signed and unsigned values are machine-dependent, because they depend on the sizes of
+the various integer types. For example, suppose that int is 16 bits and long is 32 bits. Then -1L < 1U,
+because 1U, which is an unsigned int, is promoted to a signed long. But -1L > 1UL because -1L
+is promoted to unsigned long and thus appears to be a large positive number.
+当表达式中包含unsigned类型的操作数时，转换规则要复杂一些。主要原因在于带符号值与无符号值之间的比较运算是机器相关的，因为他们取决于机器中不同数据类型的大小
+
+
+
+float to int causes
+truncation of any fractional part. When a double is converted to float, whether the value is rounded or
+truncated is implementation dependent.
+把float转换为int，小数部分将被截取掉。当把double转化为float时，是进行四舍五入还是截取取决于具体的实现。
+
+
+
+2.9
+Right shifting a signed quantity will fill with bit signs (``arithmetic
+shift'') on some machines and with 0-bits (``logical shift'') on others.
+当对signed类型符号值进行右移时，某些机器将对左边空出的部分用符号位填补（算术移位），而
+另一些机器则对左边空出的部分用0填补（逻辑移位）。
+
+
+Note that x & ~077 is independent of word length, and is thus preferable
+to, for example, x & 0177700, which assumes that x is a 16-bit quantity. The portable form involves no
+extra cost, since ~077 is a constant expression that can be evaluated at compile time.
+注意表达式x & ～077与机器字长无关，它比形式为x & ～0177700的表达式要好，因为后者假定x是
+16位的数值。这种可移植形式并没有增加额外的开销，因为～077是常量表达式，可以在编译时求值。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
