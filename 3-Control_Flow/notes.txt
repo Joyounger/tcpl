@@ -1,0 +1,10 @@
+chap3
+
+
+3.4
+With the exception of multiple labels for a single
+computation, fall-throughs should be used sparingly, and commented
+除了一个需要计算多个标号的情况外，应尽量减少从一个分支直接进入下一个分支执行这种用法，
+在不得不使用的情况下应加上适当的程序注释。
+
+
