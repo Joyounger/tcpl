@@ -1,0 +1,86 @@
+chap 4
+
+New preprocessor facilities include a more complete set of
+conditional compilation directives, a way to create quoted strings from macro arguments, and better control
+over the macro expansion process.
+新的预处理器包含一组更完整的条件编译指令（一种通过宏参数创建带引号的字符串的方法），对宏扩展过程的控制更严格
+
+
+
+4.2
+If a name that has not been previously declared occurs in an expression and is followed by a left parentheses,
+it is declared by context to be a function name, the function is assumed to return an int, and nothing is
+assumed about its arguments.
+如果先前没有声明过的一个名字出现在某个表达式中，并且其后紧跟一个左圆括号，那么上下文就会认为该名字是一个函数名字，
+该函数的返回值将被假定为int类型，但上下文并不对其参数做任何假设
+
+
+
+
+4.4
+The scope of an external variable or a function lasts from the point at which it is declared to the end of the file
+being compiled.
+外部变量的作用域从声明它的地方开始，到其所在的（待编译的）文件的末尾结束
+
+
+(There may also be extern declarations in the file
+containing the definition.) Array sizes must be specified with the definition, but are optional with an extern
+declaration.
+（定义外部变量的源文件中也可以包含对该外部变量的extern声明）
+外部变量的定义中必须指定数组的长度，但extern声明则不一定要指定数组的长度
+
+Initialization of an external variable goes only with the definition.
+外部变量的初始化只能出现在其定义中。
+
+
+4.5
+Up to some moderate program size, it is
+probably best to have one header file that contains everything that is to be shared between any two parts of the
+program; that is the decision we made here. For a much larger program, more organization and more headers
+would be needed.
+我们可以得出这样一个结论：对于某些中等规模的程序，最好只用一个头文件存放程序中各部分共享的对象。交大的程序需要使用更多的头文件，我们需要精心组织它们。
+
+
+
+4.7
+Excess register
+declarations are harmless, however, since the word register is ignored for excess or disallowed
+declarations.
+但是，过量的寄存器声明并没有什么害处，这是因为寄存器可以忽略过量的或不支持的寄存器变量声明
+
+
+4.11.2
+Formal parameters are not replaced within quoted strings. If, however, a parameter name is preceded by a # in
+the replacement text, the combination will be expanded into a quoted string with the parameter replaced by the
+actual argument. This can be combined with string concatenation to make, for example, a debugging print
+macro:
+形式参数不能用带引号的字符串替换，但是如果在替换文本中，参数名以#作为前缀则结果将被扩展为由实际参数替换该参数的带引号的字符串。例如，可以将它与字符串
+连接运算符结合起来编写一个调试打印宏：
+
+
+If a
+parameter in the replacement text is adjacent to a ##, the parameter is replaced by the actual argument, the ##
+and surrounding white space are removed, and the result is re-scanned.
+如果替换文本中的参数与##相邻，则该参数将被实际参数替换，##与前后的空白字符将被删除，并对替换后的结果重新扫描。
+
+
+
+4.11.3
+the expression defined(name) in a #if is 1 if the name has been defined, and 0 otherwise.
+在#if语句中可以使用表达式 defined(name)， 该表达式的值遵循规则是：当name已经定义时，其值为1，否则值为0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
