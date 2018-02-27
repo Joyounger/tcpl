@@ -1,0 +1,9 @@
+PROJECT(tcpl_chap8)
+CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+
+
+#ADD_EXECUTABLE(atoi_v2 atoi_v2.c)
+
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exercise/) #设置属性CMAKE_RUNTIME_OUTPUT_DIRECTORY，控制编译出的可执行文件的输出路径
+ADD_EXECUTABLE(8-1 ./exercise/8-1.c)
