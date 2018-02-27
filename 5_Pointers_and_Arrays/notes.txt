@@ -1,0 +1,11 @@
+
+5.6
+If the lines to be sorted are stored end-to-end in one long character
+array, then each line can be accessed by a pointer to its first character. The pointers themselves can bee stored
+in an array. Two lines can be compared by passing their pointers to strcmp. When two out-of-order lines
+have to be exchanged, the pointers in the pointer array are exchanged, not the text lines themselves.
+如果待排序的文本行首尾相连的存储在一个长字符数组中，那么每个文本行可通过指向它的第一个字符的指针来访问。这些指针本身可以存储在
+一个数组中。这样，将指向两个文本行的指针传递给函数strcmp就可以实现对这两个文本行的比较。当交换次序颠倒的两个文本行时，实际上
+交换的是指针数组中与这两个文本行相对应的指针，而不是这两个文本行本身。
+
+
