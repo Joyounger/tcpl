@@ -1,0 +1,100 @@
+﻿Microsoft Windows [版本 10.0.17134.81]
+C:\Users\kolya>java -jar jenkins.war
+mod-Running from: C:\Users\kolya\jenkins.war
+webroot: $user.home/.jenkins
+六月 26, 2018 6:13:00 下午 org.eclipse.jetty.util.log.Log initialized
+信息: Logging initialized @3312ms to org.eclipse.jetty.util.log.JavaUtilLog
+六月 26, 2018 6:13:00 下午 winstone.Logger logInternal
+信息: Beginning extraction from war file
+[33m六月 26, 2018 6:13:30 下午 org.eclipse.jetty.server.handler.ContextHandler setContextPath
+警告: Empty contextPath
+[0m六月 26, 2018 6:13:30 下午 org.eclipse.jetty.server.Server doStart
+信息: jetty-9.4.z-SNAPSHOT, build timestamp: 2017-11-22T05:27:37+08:00, git hash: 82b8fb23f757335bb3329d540ce37a2a2615f0a8
+六月 26, 2018 6:13:32 下午 org.eclipse.jetty.webapp.StandardDescriptorProcessor visitServlet
+信息: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+六月 26, 2018 6:13:32 下午 org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+信息: DefaultSessionIdManager workerName=node0
+六月 26, 2018 6:13:32 下午 org.eclipse.jetty.server.session.DefaultSessionIdManager doStart
+信息: No SessionScavenger set, using defaults
+六月 26, 2018 6:13:32 下午 org.eclipse.jetty.server.session.HouseKeeper startScavenging
+信息: Scavenging every 660000ms
+Jenkins home directory: C:\Users\kolya\.jenkins found at: $user.home/.jenkins
+六月 26, 2018 6:13:36 下午 org.eclipse.jetty.server.handler.ContextHandler doStart
+信息: Started w.@a1217f9{/,file:///C:/Users/kolya/.jenkins/war/,AVAILABLE}{C:\Users\kolya\.jenkins\war}
+六月 26, 2018 6:13:36 下午 org.eclipse.jetty.server.AbstractConnector doStart
+信息: Started ServerConnector@72b16078{HTTP/1.1,[http/1.1]}{0.0.0.0:8080}
+六月 26, 2018 6:13:36 下午 org.eclipse.jetty.server.Server doStart
+信息: Started @39626ms
+六月 26, 2018 6:13:36 下午 winstone.Logger logInternal
+信息: Winstone Servlet Engine v4.0 running: controlPort=disabled
+六月 26, 2018 6:13:39 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Started initialization
+六月 26, 2018 6:13:39 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Listed all plugins
+六月 26, 2018 6:13:43 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Prepared all plugins
+六月 26, 2018 6:13:43 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Started all plugins
+六月 26, 2018 6:13:43 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Augmented all extensions
+六月 26, 2018 6:13:46 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Loaded all jobs
+六月 26, 2018 6:13:48 下午 hudson.model.AsyncPeriodicWork$1 run
+信息: Started Download metadata
+六月 26, 2018 6:13:52 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@2e3572fe: display name [Root WebApplicationContext]; startup date [Tue Jun 26 18:13:52 CST 2018]; root of context hierarchy
+六月 26, 2018 6:13:52 下午 org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+信息: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@2e3572fe]: org.springframework.beans.factory.support.DefaultListableBeanFactory@6316da8f
+六月 26, 2018 6:13:52 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@6316da8f: defining beans [authenticationManager]; root of factory hierarchy
+六月 26, 2018 6:13:52 下午 org.springframework.context.support.AbstractApplicationContext prepareRefresh
+信息: Refreshing org.springframework.web.context.support.StaticWebApplicationContext@40dd3394: display name [Root WebApplicationContext]; startup date [Tue Jun 26 18:13:52 CST 2018]; root of context hierarchy
+六月 26, 2018 6:13:52 下午 org.springframework.context.support.AbstractApplicationContext obtainFreshBeanFactory
+信息: Bean factory for application context [org.springframework.web.context.support.StaticWebApplicationContext@40dd3394]: org.springframework.beans.factory.support.DefaultListableBeanFactory@3e58f09d
+六月 26, 2018 6:13:52 下午 org.springframework.beans.factory.support.DefaultListableBeanFactory preInstantiateSingletons
+信息: Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3e58f09d: defining beans [filter,legacy]; root of factory hierarchy
+六月 26, 2018 6:13:54 下午 jenkins.install.SetupWizard init
+信息:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+d52e97c4514849628ceed06c708d9af6
+
+This may also be found at: C:\Users\kolya\.jenkins\secrets\initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+六月 26, 2018 6:14:00 下午 hudson.model.UpdateSite updateData
+信息: Obtained the latest update center data file for UpdateSource default
+六月 26, 2018 6:14:02 下午 hudson.model.DownloadService$Downloadable load
+信息: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+六月 26, 2018 6:14:02 下午 hudson.model.UpdateSite updateData
+信息: Obtained the latest update center data file for UpdateSource default
+六月 26, 2018 6:14:02 下午 hudson.model.AsyncPeriodicWork$1 run
+信息: Finished Download metadata. 14,330 ms
+六月 26, 2018 6:14:02 下午 jenkins.InitReactorRunner$1 onAttained
+信息: Completed initialization
+六月 26, 2018 6:14:03 下午 hudson.WebAppMain$3 run
+信息: Jenkins is fully up and running
+
+
+Jenkins已就绪！
+你已跳过创建admin用户的步骤。要登录请使用用户名：'admin' 及用于访问安装向导的管理员密码。
+You have skipped the configuration of the Jenkins URL. 
+
+To configure the Jenkins URL, go to "Manage Jenkins" page.
+
+
+
+
+C:\Users\kolya>java -jar jenkins.war
+http://localhost:8080/
+admin
+d52e97c4514849628ceed06c708d9af6
