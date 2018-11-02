@@ -1,0 +1,54 @@
+$ ./1-19.exe < 1-19.c
+
+FOE fednfi#
+)1-( FOE enifed#
+fidne#
+
+
+/* ezis enil tupni xam */ 0001 ENILXAM enifed#
+;)enilxam tni ,][enil rahc(enilteg tni
+
+)][s rahc(esrever diov
+{
+;i tni
+;)s(nelrts = nel tni
+
+{ )++i ;2 / nel < i ;0 = i(rof
+;]i[s = pmt rahc
+;]i - 1 - nel[s = ]i[s
+;pmt = ]i - 1 - nel[s
+}
+}
+
+
+)][vgra* tsnoc rahc ,cgra tni(niam tni
+{
+;nel tni
+;]ENILXAM[enil rahc
+
+{ )0 > ))ENILXAM ,enil(enilteg = nel((elihw
+;)enil(esrever
+;)enil ,"s%"(ftnirp
+}
+
+;0 nruter
+}
+
+
+
+
+/* ;htgnel nruter ,s otni enil a daer :enilteg */
+)mil tni ,][s rahc(enilteg tni
+{
+;i ,c tni
+{ )i++ ;'n\' =! c && FOE =! ))(rahcteg = c( && 1- mil < i ;0 = i( rof
+;c = ]i[s
+}
+{ )'n\' == c( fi
+;c = ]i[s
+;i++
+}
+;'0\' = ]i[s
+;i nruter
+}
+

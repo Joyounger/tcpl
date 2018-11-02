@@ -22,6 +22,7 @@ int main(int argc, char const *argv[])
 
     max = 0;
     while ((len = getline(line, MAXLINE)) > 0) {
+    	printf("%d, %s\n", len, line);
         if (len > max) {
             max = len;
             copy(longest, line);
@@ -69,6 +70,6 @@ void copy(char to[], char from[])
 
 /*
 $ gcc -ansi -pedantic 1-16.c -o 1-16
-
+$ ./1-16.exe < 1-16.c
 
 */
