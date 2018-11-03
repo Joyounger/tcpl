@@ -1,11 +1,18 @@
 PROJECT(tcpl_chap1)
 CMAKE_MINIMUM_REQUIRED(VERSION 2.6)
+MESSAGE(STATUS "operation system is ${CMAKE_SYSTEM}")
+SET(CMAKE_C_FLAGS "-W -Wall -std=c99  -pedantic")
 
+ADD_EXECUTABLE(1.5.4_Word_Counting 1.5.4_Word_Counting.c)
+ADD_EXECUTABLE(1.9_Character_Arrays 1.9_Character_Arrays.c)
 
-ADD_EXECUTABLE(1_5_4 1_5_4.c)
-ADD_EXECUTABLE(1.9-CharacterArrays 1.9-CharacterArrays.c)
-
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exercise/) #设置属性CMAKE_RUNTIME_OUTPUT_DIRECTORY，控制编译出的可执行文件的输出路径
+IF (WIN32)
+    MESSAGE(STATUS "Now is windows")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exercise/exe/) #设置属性CMAKE_RUNTIME_OUTPUT_DIRECTORY，控制编译出的可执行文件的输出路径
+ELSEIF (UNIX)
+    MESSAGE(STATUS "Now is UNIX-like OS's.")
+    set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ./exercise/elf/)
+ENDIF ()
 ADD_EXECUTABLE(1-2 ./exercise/1-2.c)
 ADD_EXECUTABLE(1-3 ./exercise/1-3.c)
 ADD_EXECUTABLE(1-4 ./exercise/1-4.c)
