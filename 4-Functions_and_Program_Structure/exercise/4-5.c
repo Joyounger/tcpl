@@ -1,6 +1,6 @@
-// date:17.6.18
-// author: linyang <942510346@qq.com>
-
+/* date:17.6.18
+ author: linyang <942510346@qq.com>
+*/
 
 /*
 Exercise 4-5. Add access to library functions like sin, exp, and pow. See <math.h> in Appendix B, Section 4.
@@ -13,6 +13,7 @@ Exercise 4-5. Add access to library functions like sin, exp, and pow. See <math.
 
 #define MAXOP 100 		/* max size of operand or operator */
 #define NUMBER '0' 		/* signal that a number was found */
+#define IDENTIFIER   1
 #define MAXVAL 100 		/* maximum depth of val stack */
 #define BUFSIZE 100
 
@@ -139,15 +140,15 @@ int getop(char s[])
 	i = 0;
 
 	if (isalpha(c)) {
-		while (isalpha(s[i++]) = c) {
+		while (isalpha(s[i++] = c = getch())) {
 			c = getch();
 		}
 		s[i - 1] = '\0';
 		if (c != EOF) {
-			unGetch();
+			ungetch(c);
 		}
 
-		return IDENTIFER;
+		return IDENTIFIER;
 	}
 
 	if (isdigit(c)) /* collect integer part */
